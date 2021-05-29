@@ -1,0 +1,74 @@
+/* Brown regular */
+@font-face {
+  font-family: 'Brown';
+  font-style: normal;
+  font-display: swap;
+  font-weight: $normal;
+  src: url(../fonts/Brown_regular.woff) format('woff');
+}
+
+/* Brown bold */
+@font-face {
+  font-family: 'Brown';
+  font-style: normal;
+  font-display: swap;
+  font-weight: $bold;
+  src: url(../fonts/Brown_bold.woff) format('woff');
+}
+
+/* noto-sans-jp-500 - latin_japanese */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-display: swap;
+  font-weight: $normal;
+  src: url(../fonts/noto-sans-jp-v28-latin_japanese-500.woff) format('woff');
+}
+
+/* noto-sans-jp-700 - latin_japanese */
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-display: swap;
+  font-weight: $bold;
+  src: url(../fonts/noto-sans-jp-v28-latin_japanese-700.woff) format('woff');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+html {
+  font-family: $font-family;
+  font-weight: $normal;
+  font-size: 16px;
+  line-height: 2;
+  color: $text-base;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: $font-family;
+}
