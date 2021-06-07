@@ -4,9 +4,9 @@
       Organize,<br />design <span class="heading__amp">&amp;</span> code.
     </h2>
     <p class="hero__description description">
-      主に日頃の仕事や生活などで得た知見や気づきを<br
+      主に日々の仕事や生活などで得た知見や気づきを発散し、<br
         class="description__br"
-      />整理、<br />発散することを目的とした個人サイトです。
+      />思考整理することを目的とした個人サイトです。
     </p>
   </section>
 </template>
@@ -65,8 +65,10 @@ export default Vue.extend({
   }
 
   &__br {
+    display: none;
+
     @include tablet-ls {
-      display: none;
+      display: block;
     }
   }
 }
