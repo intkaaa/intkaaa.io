@@ -47,7 +47,6 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .header {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
