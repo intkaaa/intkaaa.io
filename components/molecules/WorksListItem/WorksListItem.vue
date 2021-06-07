@@ -1,5 +1,6 @@
 <template>
   <NuxtLink :to="'entry/' + id" class="item">
+    <time class="item__date" v-text="date" />
     <p class="item__title" v-text="title" />
   </NuxtLink>
 </template>
@@ -14,11 +15,11 @@ export default Vue.extend({
       type: String,
       default: '',
     },
-    title: {
+    date: {
       type: String,
       required: true,
     },
-    role: {
+    title: {
       type: String,
       required: true,
     },
@@ -32,27 +33,26 @@ export default Vue.extend({
   gap: $xxs;
   text-decoration: none;
 
-  &__title,
-  &__role {
+  &__date {
+    margin-top: $xxxs;
+    color: $text-base;
+    font-size: 12px;
     line-height: 1;
+    letter-spacing: 0.05rem;
+
+    @include tablet-ls {
+      font-size: 14px;
+    }
   }
 
   &__title {
     color: $text-base;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: $bold;
+    line-height: 1.8;
 
     @include tablet-ls {
-      font-size: 28px;
-    }
-  }
-
-  &__role {
-    color: $text-pale;
-    font-size: 12px;
-
-    @include tablet-ls {
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 }

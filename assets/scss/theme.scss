@@ -1,19 +1,9 @@
-/* Brown regular */
 @font-face {
-  font-family: 'Brown';
+  font-family: 'Roobert';
   font-style: normal;
   font-display: swap;
-  font-weight: $normal;
-  src: url(../fonts/Brown_regular.woff) format('woff');
-}
-
-/* Brown bold */
-@font-face {
-  font-family: 'Brown';
-  font-style: normal;
-  font-display: swap;
-  font-weight: $bold;
-  src: url(../fonts/Brown_bold.woff) format('woff');
+  font-weight: 600;
+  src: url(../fonts/Roobert-SemiBold.woff) format('woff');
 }
 
 /* noto-sans-jp-500 - latin_japanese */
@@ -46,9 +36,10 @@
 html {
   font-family: $font-family;
   font-weight: $normal;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 2;
   color: $text-base;
+  background-color: $primary;
 }
 
 body {
@@ -71,4 +62,32 @@ input, button, textarea, select {
   -moz-appearance: none;
   appearance: none;
   font-family: $font-family;
+}
+
+.page {
+  &-enter-active,
+  &-leave-active {
+    transition-property: opacity transform;
+    transition-timing-function: ease;
+  }
+
+  &-enter-active {
+    transition-duration: 1000ms;
+  }
+
+  &-leave-active {
+    transition-duration: 500ms;
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  &-enter-to,
+  &-leave {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="layout">
+  <div id="top" class="layout">
     <AppHeader class="layout__header" />
     <Nuxt class="layout__content" />
     <AppFooter class="layout__footer" />
@@ -22,26 +22,19 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .layout {
   padding: 0 $m;
-  background-color: $white;
+  background-color: $primary;
 
   @include tablet-ls {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 0 $xxxl;
+    padding: calc(60px - #{$m}) 60px 0;
   }
 
   &__header {
+    z-index: 1;
     position: sticky;
     top: 0;
-    width: 100vw;
-    margin-left: -#{$m};
-    padding: $xl $m $l;
-
-    @include tablet-ls {
-      margin-left: -#{$xxxl};
-      padding: $xxxl $xxxl $xxl;
-    }
   }
 
   &__content {

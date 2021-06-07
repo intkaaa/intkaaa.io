@@ -8,7 +8,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'intkaaa.io',
+    title: 'intkaaa I/O',
     htmlAttrs: {
       lang: 'ja',
     },
@@ -32,6 +32,7 @@ export default {
       src: '~/plugins/prism.js',
       mode: 'client',
     },
+    { src: '~/plugins/vue-scroll.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -51,6 +52,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
+    '@nuxtjs/date-fns',
   ],
 
   markdownit: {
